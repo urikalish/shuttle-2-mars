@@ -1,0 +1,425 @@
+@font-face {
+	font-family: "itc-eras-light";
+	src: url("fonts/itc-eras-light.woff") format("woff");
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+html {
+	font-size: 16px;
+}
+
+body {
+	font-family: "Orbitron", arial, sans-serif;
+	color: #fff;
+	margin: 0;	
+	padding: 0;
+	background-color: #000;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+nav > ul > li {
+	list-style-type: none;
+    list-style-image: none;
+    display: inline;
+}
+
+.main {
+	min-width: 1024px;
+	min-height: 500px;
+	animation: fade-in 1s;
+}
+
+.main__header {
+	height: 60px;
+	background-color: #611;
+}
+
+.main__header__container {
+	width: 1024px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.main__header__title {
+}
+
+.main__header__title > span:nth-of-type(1) {
+	font-size: 32px;
+}
+
+.main__header__title > span:nth-of-type(2) {
+	font-size: 16px;
+}
+
+.main__header__title > span:nth-of-type(3) {
+	font-size: 32px;
+}
+
+.main__header__title > span:nth-of-type(4) {
+	display: inline-block;
+	position: relative;
+	left: -31px;
+	top: -22px;    
+	background-color: #f44;
+	width: 6px;
+	height: 6px;
+	border-radius: 3px;
+}
+
+.main__header__nav {
+}
+
+.main__header__nav li {
+	padding: 7px 0;	
+}
+
+.main__header__nav li > a {
+	padding: 7px 15px;
+	color: #a66;
+	text-transform: uppercase;
+	transition: all 1s ease;
+}
+
+.main__header__nav li {
+	border-bottom: 2px solid #944;
+	transition: all 1s ease;
+}
+
+.main__header__nav li.active {
+	border-bottom: 2px solid #f44;
+}
+
+.main__header__nav li.active a {
+	color: #fff;	
+}
+
+.main__content {
+	width: 1024px;
+	margin: 0 auto;
+	overflow: hidden;
+	background-color: #000;
+}
+
+.main__content__container {
+	padding: 15px 15px 0 15px;
+}
+
+.view {
+	position: relative;
+	display: block;
+	height: 100%;
+	animation: fade-in 1s;
+}
+
+.home-view {
+	background: url("img/mars.jpg") 110px -10px no-repeat;
+}
+
+.book-view {
+	background: url("img/mars.jpg") 110px -10px no-repeat;
+}
+
+.prepare-view {
+	background: url("img/mars.jpg") 110px -10px no-repeat;
+}
+
+.gallery-view {
+	background: url("img/mars.jpg") 110px -10px no-repeat;
+}
+
+.about-view {
+	background: url("img/mars.jpg") 110px -10px no-repeat;
+}
+
+article .panel {
+	position: absolute;
+	background-color: #444;
+	opacity: 0.5;
+}
+
+article .text {
+	position: absolute;
+	text-align: justify;
+	padding: 10px;
+}
+
+.main__footer {
+	height: 30px;
+	background-color: #411;
+}
+
+.main__footer__container {
+	width: 1024px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+button {
+	outline: none !important;
+	font-family: itc-eras-light, Calibri, sans-serif;
+	font-weight: lighter;
+	font-size: 15px;
+	color: white;
+	background-color: #00A982;
+	width: 111px;
+	height: 30px;
+	border: none;
+	cursor: pointer;
+}
+
+button.small {
+	width: 40px;
+}
+
+button.large {
+	width: 120px;
+}
+
+button.extra-large {
+	width: 160px;
+}
+
+button:hover,
+button:focus,
+button:active {
+	color: #000;
+	border: 1px solid #666;
+	cursor: pointer;
+}
+
+button.disabled {
+	color: #ccc;
+	background-color: #777777;
+	border: 1px solid #ccc;
+	cursor: default;
+	pointer-events: none;
+}
+
+input {
+	font-family: MetricWeb-Regular, arial, sans-serif;
+}
+
+.height--100 {
+	height: 100%;
+}
+
+.width--100 {
+	width: 100%;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-direction--column {
+	flex-direction: column;
+}
+
+.justify-content--space-between {
+	justify-content: space-between;
+}
+
+.align-items--center {
+	align-items: center;
+}
+
+.flex--0 {
+	flex: 0 0 auto;
+}
+
+.flex--1 {
+	flex: 1 1 auto;
+}
+
+.relative {
+	position: relative;
+}
+
+.absolute-stretch {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.overflow--auto {
+	overflow: auto;
+}
+
+.overflow--scroll {
+	overflow: scroll;
+}
+
+.overflow--hidden {
+	overflow: hidden;
+}
+
+.margin--0-auto {
+	margin: 0 auto;
+}
+
+.margin--sm {
+	margin: 5px;
+}
+
+.margin-t--md {
+	margin-top: 10px;
+}
+
+.margin-r--md {
+	margin-right: 10px;
+}
+
+.margin-b--md {
+	margin-bottom: 10px;
+}
+
+.margin-l--md {
+	margin-left: 10px;
+}
+
+.margin-v--md {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.padding--sm {
+	padding: 5px;
+}
+
+.padding-t--md {
+	padding-top: 10px;
+}
+
+.padding-r--md {
+	padding-right: 10px;
+}
+
+.padding-b--md {
+	padding-bottom: 10px;
+}
+
+.padding-l--md {
+	padding-left: 10px;
+}
+
+.border-r {
+	border-right: 1px solid #999;
+}
+
+.header {
+	background-color: #444;
+	height: 30px;
+	line-height: 30px;
+}
+
+.header__logo-image {
+	margin: 5px;
+	width: 20px;
+	height: 20px;
+}
+
+.header__title {
+	color: #fff;
+	font-size: 16px;
+}
+
+.header__close-button {
+	width: 34px;
+	height: 100%;
+	border: none;
+	background-color: transparent;
+	color: #fff;
+	cursor: pointer;
+}
+
+.header__close-button:hover,
+.header__close-button:focus,
+.header__close-button:active {
+	border: none;
+	background-color: #c00;
+	color: #fff;
+}
+
+.tabs__item {
+	border-left: 6px solid #ddd;
+	padding: 10px;
+	margin-bottom: 10px;
+	color: #aaa;
+	cursor: pointer;
+	transition: 0.3s linear all;
+}
+
+.tabs__item.active {
+	border-left: 6px solid #444;
+	color: #000;
+	cursor: default;
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.view-container {
+	animation: fade-in 0.6s;
+}
+
+.view__header {
+	flex: 0 0 auto;
+	display: flex;
+}
+
+.view__header__title--primary {
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+.view__header__title--secondary {
+	font-size: 14px;
+	color: #999;
+}
+
+.view__content {
+	flex: 1 1 auto;
+	position: relative;
+	margin-top: 5px;
+	border-top: 1px solid #ddd;
+}
+
+.view__content__scroll-container {
+	margin-top: 5px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	overflow: auto;
+}
+
+.view__footer {
+	flex: 0 0 auto;
+	padding-top: 10px;
+	border-top: 1px solid #ddd;
+	margin-top: 10px;
+}

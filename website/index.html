@@ -1,0 +1,50 @@
+<html ng-app="mainApp">
+    <head>
+        <title>Shuttle to Mars</title>
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Shuttle to Mars"/>
+        <meta name="keywords" content="mars,shuttle,rocket,trip,vacation"/>
+        <link rel="shortcut icon" type="image/x-icon" href="img/mars.ico"/>
+        <link href="https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="main-style.css">
+        <script src="lib/angular/angular.min.js"></script>
+        <script src="main-ctrl.js"></script>
+        <script src="home/home-view.js"></script>
+        <script src="book/book-view.js"></script> 
+        <script src="prepare/prepare-view.js"></script> 
+        <script src="gallery/gallery-view.js"></script> 
+        <script src="about/about-view.js"></script>     
+    </head>
+    <body ng-controller="mainCtrl">
+        <div class="main margin--0-auto height--100 overflow--hidden flex flex-direction--column">
+            <header class="main__header">
+                <div class="main__header__container flex--0 height--100 flex align-items--center justify-content--space-between">
+                    <div class="main__header__title">
+                        <span>{{::model.mainTitle[0]}}</span><span>{{::model.mainTitle[1]}}</span><span>{{::model.mainTitle[2]}}</span><span></span>
+                    </div>
+                    <nav class="main__header__nav">
+                        <ul>
+                            <li ng-repeat="view in model.views track by $index" ng-class="{active: view.id === model.activeViewId}">
+                                <a href="#" ng-click="onViewClick(view.id)">{{::view.title}}</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <div class="main__content flex--1 relative">
+                <div class="main__content__container absolute-stretch">
+                    <home-view ng-if="model.activeViewId === 'home'" class="view home-view"></home-view>
+                    <book-view ng-if="model.activeViewId === 'book'" class="view book-view"></book-view>
+                    <prepare-view ng-if="model.activeViewId === 'prepare'" class="view prepare-view"></prepare-view>
+                    <gallery-view ng-if="model.activeViewId === 'gallery'" class="view gallery-view"></gallery-view>
+                    <about-view ng-if="model.activeViewId === 'about'" class="view about-view"></about-view>
+                </div>
+            </div>
+            <footer class="main__footer">
+                <div class="main__footer__container flex--0 height--100 flex align-items--center justify-content--space-between">
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
+
