@@ -38,7 +38,7 @@ ul {
 
 li {
 	list-style: none outside none;
-    display: inline;
+    display: inline-block;
 }
 
 .main {
@@ -113,7 +113,7 @@ li {
 
 .main__header__nav__marker-track {
 	left: 0;
-	bottom: 7px;
+	bottom: 15px;
 	height: 2px;
 	background-color: #000;
 }
@@ -121,7 +121,7 @@ li {
 .main__header__nav__marker {
 	left: 0;
 	width: 0;
-	bottom: 7px;
+	bottom: 15px;
 	height: 2px;
 	background-color: #f55;
 	transition: all 0.5s cubic-bezier(0.250, 0.100, 0.250, 1.000);
