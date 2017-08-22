@@ -18,8 +18,8 @@
     </head>
     <body ng-controller="mainCtrl">
         <div class="main margin--0-auto height--100 overflow--hidden flex flex-direction--column">
-            <header class="main__header">
-                <div class="main__header__container flex--0 height--100 flex align-items--center justify-content--space-between">
+            <div class="main__header-wrapper">
+                <header class="main__header flex--0 height--100 flex align-items--center justify-content--space-between">
                     <div class="main__header__title">
                         <span>{{::model.mainTitle[0]}}</span><span>{{::model.mainTitle[1]}}</span><span>{{::model.mainTitle[2]}}</span><span></span>
                     </div>
@@ -32,8 +32,8 @@
                         <div class="absolute width--100 main__header__nav__marker-track"></div>
                         <div class="absolute main__header__nav__marker"></div>
                     </nav>
-                </div>
-            </header>
+                </header>
+            </div>
             <div class="main__content flex--1 relative">
                 <div class="main__content__container absolute-stretch">
                     <home-view ng-if="model.activeViewId === 'home'" class="view home-view"></home-view>
@@ -43,10 +43,10 @@
                     <about-view ng-if="model.activeViewId === 'about'" class="view about-view"></about-view>
                 </div>
             </div>
-            <footer class="main__footer">
-                <div class="main__footer__container flex--0 height--100 flex align-items--center justify-content--space-between">
-                </div>
-            </footer>
+            <div class="main__footer-wrapper">
+                <footer class="main__footer flex--0 height--100 flex align-items--center justify-content--space-between">
+                </footer>
+            </div>
         </div>
     </body>
 </html>

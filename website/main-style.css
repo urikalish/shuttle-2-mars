@@ -47,13 +47,13 @@ li {
 	animation: fade-in 1s;
 }
 
-.main__header {
+.main__header-wrapper {
 	height: 60px;
 	background-color: #611;
 	border-bottom: 1px solid #a66;
 }
 
-.main__header__container {
+.main__header {
 	width: 1024px;
 	margin: 0 auto;
 	padding: 0 15px;
@@ -177,13 +177,13 @@ article .text {
 	padding: 10px;
 }
 
-.main__footer {
+.main__footer-wrapper {
 	height: 30px;
 	background-color: #411;
 	border-top: 1px solid #a66;
 }
 
-.main__footer__container {
+.main__footer {
 	width: 1024px;
 	margin: 0 auto;
 	padding: 0 15px;
