@@ -25,7 +25,7 @@
                     <nav class="main__header__nav">
                         <ul>
                             <li ng-repeat="view in model.views track by $index" ng-class="{active: view.id === model.activeViewId}">
-                                <a href="#" ng-click="onViewClick(view.id)">{{::view.title}}</a>
+                                <a href="#" ng-click="onViewClick(this)">{{::view.title}}</a>
                             </li>
                         </ul>
                     </nav>

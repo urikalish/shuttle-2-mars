@@ -21,8 +21,8 @@ angular.module('mainApp').controller('mainCtrl', function mainCtrl($scope) {
 
   $scope.model.activeViewId = $scope.model.views[0].id;
 
-  $scope.onViewClick = function onViewClick(id) {
-    $scope.model.activeViewId = id;
+  $scope.onViewClick = function onViewClick(sender) {
+    $scope.model.activeViewId = sender.view.id;
   }
 
 });
