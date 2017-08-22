@@ -40,13 +40,14 @@ nav > ul > li {
 
 .main {
 	min-width: 1024px;
-	min-height: 500px;
+	min-height: 600px;
 	animation: fade-in 1s;
 }
 
 .main__header {
 	height: 60px;
 	background-color: #611;
+	border-bottom: 1px solid #a66;
 }
 
 .main__header__container {
@@ -75,7 +76,7 @@ nav > ul > li {
 	position: relative;
 	left: -31px;
 	top: -22px;    
-	background-color: #f44;
+	background-color: #f55;
 	width: 6px;
 	height: 6px;
 	border-radius: 3px;
@@ -91,17 +92,18 @@ nav > ul > li {
 .main__header__nav li > a {
 	padding: 7px 15px;
 	color: #a66;
+	font-size: 18px;
 	text-transform: uppercase;
 	transition: all 1s ease;
 }
 
 .main__header__nav li {
-	border-bottom: 2px solid #944;
+	border-bottom: 2px solid #000;
 	transition: all 1s ease;
 }
 
 .main__header__nav li.active {
-	border-bottom: 2px solid #f44;
+	border-bottom: 2px solid #f55;
 }
 
 .main__header__nav li.active a {
@@ -161,6 +163,7 @@ article .text {
 .main__footer {
 	height: 30px;
 	background-color: #411;
+	border-top: 1px solid #a66;
 }
 
 .main__footer__container {
