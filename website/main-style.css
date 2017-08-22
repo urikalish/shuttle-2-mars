@@ -32,9 +32,12 @@ a {
 	text-decoration: none;
 }
 
-nav > ul > li {
-	list-style-type: none;
-    list-style-image: none;
+ul {
+	padding: 0;
+}
+
+li {
+	list-style: none outside none;
     display: inline;
 }
 
@@ -91,23 +94,37 @@ nav > ul > li {
 
 .main__header__nav li > a {
 	padding: 7px 15px;
-	color: #a66;
+	color: #a55;
 	font-size: 18px;
 	text-transform: uppercase;
 	transition: all 1s ease;
 }
 
 .main__header__nav li {
-	border-bottom: 2px solid #000;
 	transition: all 1s ease;
 }
 
 .main__header__nav li.active {
-	border-bottom: 2px solid #f55;
 }
 
 .main__header__nav li.active a {
 	color: #fff;	
+}
+
+.main__header__nav__marker-track {
+	left: 0;
+	bottom: 7px;
+	height: 2px;
+	background-color: #000;
+}
+
+.main__header__nav__marker {
+	left: 0;
+	width: 0;
+	bottom: 7px;
+	height: 2px;
+	background-color: #f55;
+	transition: all 0.5s ease;
 }
 
 .main__content {
@@ -251,6 +268,14 @@ input {
 
 .relative {
 	position: relative;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.fixed {
+	position: fixed;
 }
 
 .absolute-stretch {

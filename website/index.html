@@ -7,6 +7,7 @@
         <link rel="shortcut icon" type="image/x-icon" href="img/mars.ico"/>
         <link href="https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="main-style.css">
+        <script src="lib/jquery/jquery-3.2.1.min.js"></script>
         <script src="lib/angular/angular.min.js"></script>
         <script src="main-ctrl.js"></script>
         <script src="home/home-view.js"></script>
@@ -22,12 +23,14 @@
                     <div class="main__header__title">
                         <span>{{::model.mainTitle[0]}}</span><span>{{::model.mainTitle[1]}}</span><span>{{::model.mainTitle[2]}}</span><span></span>
                     </div>
-                    <nav class="main__header__nav">
+                    <nav class="main__header__nav relative">
                         <ul>
                             <li ng-repeat="view in model.views track by $index" ng-class="{active: view.id === model.activeViewId}">
                                 <a href="#" ng-click="onViewClick(this)">{{::view.title}}</a>
                             </li>
                         </ul>
+                        <div class="absolute width--100 main__header__nav__marker-track"></div>
+                        <div class="absolute main__header__nav__marker"></div>
                     </nav>
                 </div>
             </header>
