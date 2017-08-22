@@ -59,22 +59,22 @@ li {
 	padding: 0 15px;
 }
 
-.main__header__title {
+.main__header__logo {
 }
 
-.main__header__title > span:nth-of-type(1) {
+.main__header__logo > span:nth-of-type(1) {
 	font-size: 32px;
 }
 
-.main__header__title > span:nth-of-type(2) {
+.main__header__logo > span:nth-of-type(2) {
 	font-size: 16px;
 }
 
-.main__header__title > span:nth-of-type(3) {
+.main__header__logo > span:nth-of-type(3) {
 	font-size: 32px;
 }
 
-.main__header__title > span:nth-of-type(4) {
+.main__header__logo > span:nth-of-type(4) {
 	display: inline-block;
 	position: relative;
 	left: -31px;
