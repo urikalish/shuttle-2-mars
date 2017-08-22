@@ -97,11 +97,11 @@ li {
 	color: #a55;
 	font-size: 18px;
 	text-transform: uppercase;
-	transition: all 1s ease;
+	transition: all 1s cubic-bezier(0.250, 0.100, 0.250, 1.000);
 }
 
 .main__header__nav li {
-	transition: all 1s ease;
+	transition: all 1s cubic-bezier(0.250, 0.100, 0.250, 1.000);
 }
 
 .main__header__nav li.active {
@@ -124,7 +124,7 @@ li {
 	bottom: 7px;
 	height: 2px;
 	background-color: #f55;
-	transition: all 0.5s ease;
+	transition: all 0.5s cubic-bezier(0.250, 0.100, 0.250, 1.000);
 }
 
 .main__content {
