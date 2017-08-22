@@ -79,7 +79,7 @@ li {
 	position: relative;
 	left: -31px;
 	top: -22px;    
-	background-color: #f55;
+	background-color: #f44;
 	width: 6px;
 	height: 6px;
 	border-radius: 3px;
@@ -123,7 +123,7 @@ li {
 	width: 0;
 	bottom: 15px;
 	height: 2px;
-	background-color: #f55;
+	background-color: #f44;
 	transition: all 0.5s cubic-bezier(0.250, 0.100, 0.250, 1.000);
 }
 
