@@ -34,8 +34,8 @@
                     </nav>
                 </header>
             </div>
-            <div class="main__content flex--1 relative">
-                <div class="main__content__container absolute-stretch">
+            <div class="main__content-wrapper flex--1 relative">
+                <div class="main__content absolute-stretch">
                     <home-view ng-if="model.activeViewId === 'home'" class="view home-view"></home-view>
                     <book-view ng-if="model.activeViewId === 'book'" class="view book-view"></book-view>
                     <prepare-view ng-if="model.activeViewId === 'prepare'" class="view prepare-view"></prepare-view>
