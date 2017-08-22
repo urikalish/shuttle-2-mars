@@ -135,7 +135,7 @@ li {
 }
 
 .main__content {
-	padding: 15px 15px 0 15px;
+	padding: 0 15px;
 }
 
 .view {
@@ -143,6 +143,33 @@ li {
 	display: block;
 	height: 100%;
 	animation: fade-in 1s;
+}
+
+article {
+	height: 100%;
+	padding-top: 20px;
+}
+
+article .text-panel {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+article .panel {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #444;
+	opacity: 0.5;
+}
+
+article .text {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: justify;
+	padding: 10px;
 }
 
 .home-view {
@@ -163,18 +190,6 @@ li {
 
 .about-view {
 	background: url("img/mars.jpg") 110px -10px no-repeat;
-}
-
-article .panel {
-	position: absolute;
-	background-color: #444;
-	opacity: 0.5;
-}
-
-article .text {
-	position: absolute;
-	text-align: justify;
-	padding: 10px;
 }
 
 .main__footer-wrapper {
