@@ -1,8 +1,23 @@
 <article ng-controller="bookCtrl">
-	<div class="text-panel" style="width:800px; height: 180px;">
+	<div class="text-panel" style="width:520px; height: 100px;">
 		<div class="panel"></div>
 		<div class="text">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nemo dubitet, eorum omnia officia quo spectare, quid sequi, quid fugere debeant? Re mihi non aeque satisfacit, et quidem locis pluribus. Itaque in rebus minime obscuris non multus est apud eos disserendi labor. Suo enim quisque studio maxime ducitur. Haec para/doca illi, nos admirabilia dicamus. Ita similis erit ei finis boni, atque antea fuerat, neque idem tamen; Duo Reges: constructio interrete. Quae cum essent dicta, discessimus. Id enim volumus, id contendimus, ut officii fructus sit ipsum officium. Quae diligentissime contra Aristonem dicuntur a Chryippo.
+			<div>
+				<div class="data-field">Next Launch</div>
+				<div class="data-value">{{model.nextLaunchDate.toUTCString()}}</div>
+			</div>
+			<div>
+				<div class="data-field">From</div>
+				<div class="data-value">Cape Canaveral, Florida</div>
+			</div>
+			<div>
+				<div class="data-field">To</div>
+				<div class="data-value">Columbia Hills, Mars</div>
+			</div>
+			<div>
+				<div class="data-field">Countdown</div>
+				<div class="data-value">T-{{model.timeToNextLaunch}}</div>
+			</div>
 		</div>
 	</div>
 </article>

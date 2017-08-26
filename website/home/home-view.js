@@ -9,7 +9,7 @@ angular.module('mainApp').directive('homeView', function () {
 angular.module('mainApp').controller('homeCtrl', function homeCtrl($scope, $interval) {
 
 	$scope.model = {
-		nextLaunchDate: new Date(2029,6,16,6,32,0,0),
+		nextLaunchDate: new Date(Date.UTC(2029,6,16,13,32,0,0)),
 		timeToNextLaunch: 0
 	};
 
