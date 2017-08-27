@@ -253,6 +253,14 @@ article {
 	padding: 5px 10px;
 }
 
+.panel-title {
+	width: 100%;
+	padding: 0 5px;
+	background-color: #aaa;
+	color: #000;
+	opacity: 0.5;
+}
+
 .data-field {
 	display: inline-block;
 	height: 25px;
