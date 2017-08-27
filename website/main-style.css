@@ -27,6 +27,18 @@ body {
 	background-color: #000;
 }
 
+input {
+	font-family: "Orbitron", arial, sans-serif;
+	outline: none;
+	height: 25px;
+}
+
+select {
+	font-family: "Orbitron", arial, sans-serif;
+	outline: none;
+	height: 25px;
+}
+
 a {
 	color: #fff;
 	text-decoration: none;
@@ -219,13 +231,13 @@ article {
 	padding-top: 20px;
 }
 
-.text-panel {
+.content-panel {
 	position: relative;
 	width: 100%;
 	height: 100%;
 }
 
-.text-panel .panel {
+.content-panel .panel {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -233,16 +245,18 @@ article {
 	opacity: 0.5;
 }
 
-.text-panel .text {
+.content-panel .content {
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	text-align: justify;
-	padding: 10px;
+	padding: 5px 10px;
 }
 
 .data-field {
 	display: inline-block;
+	height: 25px;
+	line-height: 25px;
 	color: #aaa;
 	width: 200px;
 }
@@ -255,6 +269,8 @@ article {
 
 .data-value {
 	display: inline-block;
+	height: 25px;
+	line-height: 25px;
 }
 
 .main__footer-wrapper {

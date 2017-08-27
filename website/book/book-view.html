@@ -1,22 +1,35 @@
 <article ng-controller="bookCtrl">
-	<div class="text-panel" style="width:520px; height: 100px;">
+	<div class="content-panel" style="width:520px; height: 37px;">
 		<div class="panel"></div>
-		<div class="text">
+		<div class="content">
 			<div>
-				<div class="data-field">Next Launch</div>
-				<div class="data-value">{{model.nextLaunchDate.toUTCString()}}</div>
+				<div class="data-field">Select Launch</div>
+				<select ng-model="model.selectedLaunch"
+						ng-options="launch as launch.name for launch in model.launches"
+						ng-change="launchChanged(model.selectedLaunch)"
+						class="data-value" style="width: 290px;" >
+				</select>
+			</div>
+		</div>
+	</div>
+	<div ng-show="model.selectedLaunch" class="content-panel" style="margin-top: 20px; width:520px; height: 110px;">
+		<div class="panel"></div>
+		<div class="content">
+			<div>
+				<div class="data-field">Launch</div>
+				<div class="data-value">{{model.selectedLaunch.name}}</div>
 			</div>
 			<div>
 				<div class="data-field">From</div>
-				<div class="data-value">Cape Canaveral, Florida</div>
+				<div class="data-value">{{model.selectedLaunch.from}}</div>
 			</div>
 			<div>
 				<div class="data-field">To</div>
-				<div class="data-value">Columbia Hills, Mars</div>
+				<div class="data-value">{{model.selectedLaunch.to}}</div>
 			</div>
 			<div>
 				<div class="data-field">Countdown</div>
-				<div class="data-value">T-{{model.timeToNextLaunch}}</div>
+				<div class="data-value">T-{{model.timeToLaunch}}</div>
 			</div>
 		</div>
 	</div>

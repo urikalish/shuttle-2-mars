@@ -9,18 +9,31 @@ angular.module('mainApp').directive('bookView', function () {
 angular.module('mainApp').controller('bookCtrl', function bookCtrl($scope, $interval) {
 
 	$scope.model = {
-		nextLaunchDate: new Date(Date.UTC(2029,6,16,13,32,0,0)),
-		timeToNextLaunch: 0
+		launches: [
+			{name: 'JUN 2029', date: new Date(Date.UTC(2029,5,16,13,32,0,0)), from: 'Cape Canaveral, Florida', to: 'Station 001, Mars'},
+			{name: 'JUL 2029', date: new Date(Date.UTC(2029,6,16,13,32,0,0)), from: 'Cape Canaveral, Florida', to: 'Station 002, Mars'},
+			{name: 'AUG 2029', date: new Date(Date.UTC(2029,7,16,13,32,0,0)), from: 'Cape Canaveral, Florida', to: 'Station 003, Mars'},
+			{name: 'SEP 2029', date: new Date(Date.UTC(2029,8,16,13,32,0,0)), from: 'Cape Canaveral, Florida', to: 'Station 001, Mars'},
+			{name: 'OCT 2029', date: new Date(Date.UTC(2029,9,16,13,32,0,0)), from: 'Cape Canaveral, Florida', to: 'Station 001, Mars'},
+			{name: 'NOV 2029', date: new Date(Date.UTC(2029,10,16,13,32,0,0)), from: 'Cape Canaveral, Florida', to: 'Station 001, Mars'},
+			{name: 'DEC 2029', date: new Date(Date.UTC(2029,11,16,13,32,0,0)), from: 'Cape Canaveral, Florida', to: 'Station 001, Mars'}
+		],
+		selectedLaunch: null,
+		timeToLaunch: 0
 	};
 
-	function updateTimeToNextLaunch() {
-		$scope.model.timeToNextLaunch = (($scope.model.nextLaunchDate.getTime() - (new Date()).getTime()) / 1000).toFixed(0);
+	function updateTimeToLaunch() {
+		$scope.model.timeToLaunch = (($scope.model.selectedLaunch.date.getTime() - (new Date()).getTime()) / 1000).toFixed(0);
 	}
 
-	updateTimeToNextLaunch();
+	$scope.launchChanged = function launchChanged(launch) {
+		updateTimeToLaunch();
+	};
 
 	$interval(function() {
-		updateTimeToNextLaunch();
+		if ($scope.model.selectedLaunch) {
+			updateTimeToLaunch();
+		}
 	}, 1000);
 
 });
