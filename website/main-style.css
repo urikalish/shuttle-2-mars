@@ -255,10 +255,8 @@ article {
 
 .panel-title {
 	width: 100%;
-	padding: 0 5px;
-	background-color: #aaa;
-	color: #000;
-	opacity: 0.5;
+	color: #fc9;
+	margin-bottom: 15px;
 }
 
 .data-field {
