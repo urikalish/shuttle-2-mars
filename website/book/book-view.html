@@ -1,9 +1,10 @@
 <article ng-controller="bookCtrl">
-	<div class="content-panel" style="width:520px; height: 37px;">
+	<div class="content-panel" style="width:520px; height: 80px;">
 		<div class="panel"></div>
 		<div class="content">
+			<div class="panel-title">Select Launch</div>
 			<div>
-				<div class="data-field">Select Launch</div>
+				<div class="data-field">Date</div>
 				<select ng-model="model.selectedLaunch"
 						ng-options="launch as launch.name for launch in model.launches"
 						ng-change="launchChanged(model.selectedLaunch)"
@@ -12,12 +13,10 @@
 			</div>
 		</div>
 	</div>
-	<div ng-show="model.selectedLaunch" class="content-panel" style="margin-top: 20px; width:520px; height: 135px;">
+	<div ng-show="model.selectedLaunch" class="content-panel" style="margin-top: 20px; width:520px; height: 145px;">
 		<div class="panel"></div>
 		<div class="content">
-			<div class="panel-title">
-				<div class="data-value">Launch Details</div>
-			</div>
+			<div class="panel-title">Launch Details</div>
 			<div>
 				<div class="data-field">Launch</div>
 				<div class="data-value">{{model.selectedLaunch.name}}</div>
