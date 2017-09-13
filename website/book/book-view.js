@@ -66,6 +66,7 @@ angular.module('mainApp').controller('bookCtrl', function bookCtrl($scope, $inte
 	$scope.increaseNumberOfHumans = function increaseNumberOfHumans() {
 		$scope.model.numberOfHumans++;
 		enableReset();
+		enableBook();
 	};
 
 	$scope.decreaseNumberOfHumans = function decreaseNumberOfHumans() {
@@ -81,6 +82,7 @@ angular.module('mainApp').controller('bookCtrl', function bookCtrl($scope, $inte
 	$scope.increaseNumberOfCats = function increaseNumberOfCats() {
 		$scope.model.numberOfCats++;
 		enableReset();
+		enableBook();
 	};
 
 	$scope.decreaseNumberOfCats = function decreaseNumberOfCats() {
@@ -91,10 +93,6 @@ angular.module('mainApp').controller('bookCtrl', function bookCtrl($scope, $inte
 		if ($scope.model.numberOfHumans === 0 && $scope.model.numberOfCats === 0) {
 			disableBook();
 		}
-	};
-
-	$scope.numberOfCatsChanged = function numberOfCatsChanged() {
-		enableReset();
 	};
 
 	$scope.onResetClicked = function onResetClicked() {
