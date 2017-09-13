@@ -71,7 +71,7 @@ button {
 }
 
 button.disabled {
-	opacity: 0;
+	opacity: 0.25;
 	cursor: default;
 	pointer-events: none;
 }
