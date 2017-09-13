@@ -1,53 +1,55 @@
 <article ng-controller="bookCtrl">
-	<div class="book-launch-details-panel content-panel" style="margin-top: 20px; width:660px; height: 170px;">
-		<div class="panel"></div>
-		<div class="content">
-			<div class="panel-title">Launch Details</div>
-			<div class="panel-line">
-				<div class="data-field">Launch</div>
-				<select ng-model="model.selectedLaunch"
-						ng-options="launch as launch.name for launch in model.launches"
-						ng-change="launchChanged()"
-						class="data-value" style="width: 430px;">
-				</select>
-			</div>
-			<div class="panel-line">
-				<div class="data-field">From / To</div>
-				<div class="data-value">{{model.selectedLaunch.from}} / {{model.selectedLaunch.to}}</div>
-			</div>
-			<div class="panel-line">
-				<div class="data-field">Time</div>
-				<div class="data-value">{{model.selectedLaunch.date.toUTCString()}}</div>
-			</div>
-			<div class="panel-line">
-				<div class="data-field">Countdown</div>
-				<div class="data-value">T-{{model.timeToLaunch}}</div>
-			</div>
-		</div>
-	</div>
-	<div class="book-reservation-details-panel content-panel" style="margin-top: 20px; width:660px; height: 85px;">
-		<div class="panel"></div>
-		<div class="content">
-			<div class="panel-title">Reservation Details</div>
-			<div class="panel-line">
-				<div class="data-field">Humans / Cats</div>
-				<input ng-value="model.numberOfHumans" readonly="readonly" style="width: 45px;"/>
-				<div ng-click="increaseNumberOfHumans()" class="spinner up" style="top: -8px;"></div>
-				<div ng-click="decreaseNumberOfHumans()" class="spinner down" style="margin-left: -24px; top: 18px;"></div>
-				<input ng-value="model.numberOfCats" readonly="readonly" style="margin-left: 20px; width: 45px;"/>
-				<div ng-click="increaseNumberOfCats()" class="spinner up" style="top: -8px;"></div>
-				<div ng-click="decreaseNumberOfCats()" class="spinner down" style="margin-left: -24px; top: 18px;"></div>
-			</div>
-		</div>
-	</div>
-	<div class="book-actions-panel content-panel" style="width:660px; height: 85px;">
-		<div class="panel"></div>
-		<div class="content">
-			<div class="panel-title">Actions</div>
-			<div class="panel-line text-align--right">
-				<button ng-class="{'disabled': !model.canReset}" ng-click="onResetClicked()">Reset</button>
-				<button ng-class="{'disabled': !model.canBook}">Book</button>
-			</div>
-		</div>
-	</div>
+    <div class="book-launch-details-panel content-panel" style="margin-top: 20px; width:660px; height: 170px;">
+        <div class="panel"></div>
+        <div class="content">
+            <div class="panel-title">Launch Details</div>
+            <div class="panel-line">
+                <div class="data-field">Launch</div>
+                <select ng-model="model.selectedLaunch"
+                        ng-options="launch as launch.name for launch in model.launches"
+                        ng-change="launchChanged()"
+                        class="data-value" style="width: 430px;">
+                </select>
+            </div>
+            <div class="panel-line">
+                <div class="data-field">From / To</div>
+                <div class="data-value">{{model.selectedLaunch.from}} / {{model.selectedLaunch.to}}</div>
+            </div>
+            <div class="panel-line">
+                <div class="data-field">Time</div>
+                <div class="data-value">{{model.selectedLaunch.date.toUTCString()}}</div>
+            </div>
+            <div class="panel-line">
+                <div class="data-field">Countdown</div>
+                <div class="data-value">T-{{model.timeToLaunch}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="book-reservation-details-panel content-panel" style="margin-top: 20px; width:660px; height: 85px;">
+        <div class="panel"></div>
+        <div class="content">
+            <div class="panel-title">Reservation Details</div>
+            <div class="panel-line">
+                <div class="data-field">Humans / Cats</div>
+                <div class="data-value user-select--none">
+                    <input ng-value="model.numberOfHumans" readonly="readonly" style="width: 45px;"/>
+                    <div ng-click="increaseNumberOfHumans()" class="spinner up" style="top: -8px;"></div>
+                    <div ng-click="decreaseNumberOfHumans()" class="spinner down" style="margin-left: -24px; top: 18px;"></div>
+                    <input ng-value="model.numberOfCats" readonly="readonly" style="margin-left: 20px; width: 45px;"/>
+                    <div ng-click="increaseNumberOfCats()" class="spinner up" style="top: -8px;"></div>
+                    <div ng-click="decreaseNumberOfCats()" class="spinner down" style="margin-left: -24px; top: 18px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="book-actions-panel content-panel" style="width:660px; height: 85px;">
+        <div class="panel"></div>
+        <div class="content">
+            <div class="panel-title">Actions</div>
+            <div class="panel-line text-align--right">
+                <button ng-class="{'disabled': !model.canReset}" ng-click="onResetClicked()">Reset</button>
+                <button ng-class="{'disabled': !model.canBook}">Book</button>
+            </div>
+        </div>
+    </div>
 </article>
