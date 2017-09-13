@@ -288,10 +288,13 @@ article {
 	margin-bottom: 15px;
 }
 
+.panel-line {
+	line-height: 30px;
+	height: 30px;
+}
+
 .data-field {
 	display: inline-block;
-	height: 25px;
-	line-height: 25px;
 	color: #aaa;
 	width: 200px;
 }
@@ -304,8 +307,6 @@ article {
 
 .data-value {
 	display: inline-block;
-	height: 25px;
-	line-height: 25px;
 }
 
 select.data-value {
