@@ -23,12 +23,16 @@ angular.module('mainApp').controller('bookCtrl', function bookCtrl($scope, $inte
 		],
 		selectedLaunch: null,
 		timeToLaunch: 0,
+		numberOfHumans: '1',
+		numberOfCats: '0',
 		canReset: false
 	};
 
 	function reset() {
 		$scope.model.selectedLaunch = $scope.model.launches[0];
 		$scope.launchChanged();
+		$scope.model.numberOfHumans = '1';
+		$scope.model.numberOfCats = '0';
 		disableReset();
 	}
 
@@ -46,6 +50,14 @@ angular.module('mainApp').controller('bookCtrl', function bookCtrl($scope, $inte
 
 	$scope.launchChanged = function launchChanged() {
 		updateTimeToLaunch();
+		enableReset();
+	};
+
+	$scope.numberOfHumansChanged = function numberOfHumansChanged() {
+		enableReset();
+	};
+
+	$scope.numberOfCatsChanged = function numberOfCatsChanged() {
 		enableReset();
 	};
 
