@@ -54,6 +54,42 @@ li {
     display: inline-block;
 }
 
+button {
+	transition: all 1s cubic-bezier(0.250, 0.100, 0.250, 1.000);
+	outline: none !important;
+	cursor: pointer;
+	font-family: "Orbitron", arial, sans-serif;
+	font-size: 16px;
+	width: 100px;
+	height: 30px;
+	margin-left: 10px;
+	border-top-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	border: 1px solid #f96;
+	background-color: #000;
+	color: #f96;
+}
+
+button:hover,
+button:focus,
+button:active {
+	border: 1px solid #fff;
+	background-color: #000;
+	color: #fff;
+}
+
+button.disabled {
+	border: 1px solid #666;
+	background-color: #333;
+	color: #666;
+	cursor: default;
+	pointer-events: none;
+}
+
+article {
+	height: 100%;
+}
+
 .height--100 {
 	height: 100%;
 }
@@ -120,6 +156,10 @@ li {
 
 .margin--0-auto {
 	margin: 0 auto;
+}
+
+.text-align--right {
+	text-align: right;
 }
 
 .main {
@@ -226,12 +266,8 @@ li {
 	animation: fade-in 1s;
 }
 
-article {
-	height: 100%;
-	padding-top: 20px;
-}
-
 .content-panel {
+	margin-top: 20px;
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -243,6 +279,9 @@ article {
 	height: 100%;
 	background-color: #444;
 	opacity: 0.5;
+	border: 1px solid #000;
+	border-top-right-radius: 15px;
+	border-bottom-left-radius: 15px;
 }
 
 .content-panel .content {
@@ -255,7 +294,7 @@ article {
 
 .panel-title {
 	width: 100%;
-	color: #fc9;
+	color: #f96;
 	margin-bottom: 15px;
 }
 
@@ -277,6 +316,11 @@ article {
 	display: inline-block;
 	height: 25px;
 	line-height: 25px;
+}
+
+select.data-value {
+	font-size: 16px;
+	height: 23px;
 }
 
 .main__footer-wrapper {
@@ -332,45 +376,4 @@ article {
 	border: 10px solid transparent;
 	border-left: 10px solid #fff;
 	left: 5px;
-}
-
-button {
-	outline: none !important;
-	font-family: itc-eras-light, Calibri, sans-serif;
-	font-weight: lighter;
-	font-size: 15px;
-	color: white;
-	background-color: #00A982;
-	width: 111px;
-	height: 30px;
-	border: none;
-	cursor: pointer;
-}
-
-button.small {
-	width: 40px;
-}
-
-button.large {
-	width: 120px;
-}
-
-button.extra-large {
-	width: 160px;
-}
-
-button:hover,
-button:focus,
-button:active {
-	color: #000;
-	border: 1px solid #666;
-	cursor: pointer;
-}
-
-button.disabled {
-	color: #ccc;
-	background-color: #777777;
-	border: 1px solid #ccc;
-	cursor: default;
-	pointer-events: none;
 }

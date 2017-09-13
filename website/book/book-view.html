@@ -1,37 +1,37 @@
 <article ng-controller="bookCtrl">
-	<div class="content-panel" style="width:520px; height: 80px;">
+	<div ng-show="model.selectedLaunch" class="book-launch-details-panel content-panel" style="margin-top: 20px; width:520px; height: 150px;">
 		<div class="panel"></div>
 		<div class="content">
-			<div class="panel-title">Select Launch</div>
-			<div>
-				<div class="data-field">Date</div>
+			<div class="panel-title">Launch Details</div>
+			<div class="panel-line">
+				<div class="data-field">Launch</div>
 				<select ng-model="model.selectedLaunch"
 						ng-options="launch as launch.name for launch in model.launches"
 						ng-change="launchChanged(model.selectedLaunch)"
 						class="data-value" style="width: 290px;" >
 				</select>
 			</div>
-		</div>
-	</div>
-	<div ng-show="model.selectedLaunch" class="content-panel" style="margin-top: 20px; width:520px; height: 145px;">
-		<div class="panel"></div>
-		<div class="content">
-			<div class="panel-title">Launch Details</div>
-			<div>
-				<div class="data-field">Launch</div>
-				<div class="data-value">{{model.selectedLaunch.name}}</div>
-			</div>
-			<div>
+			<div class="panel-line">
 				<div class="data-field">From</div>
 				<div class="data-value">{{model.selectedLaunch.from}}</div>
 			</div>
-			<div>
+			<div class="panel-line">
 				<div class="data-field">To</div>
 				<div class="data-value">{{model.selectedLaunch.to}}</div>
 			</div>
-			<div>
+			<div class="panel-line">
 				<div class="data-field">Countdown</div>
 				<div class="data-value">T-{{model.timeToLaunch}}</div>
+			</div>
+		</div>
+	</div>
+	<div class="book-actions-panel content-panel" style="width:520px; height: 85px;">
+		<div class="panel"></div>
+		<div class="content">
+			<div class="panel-title">Actions</div>
+			<div class="panel-line text-align--right">
+				<button>Reset</button>
+				<button>Book</button>
 			</div>
 		</div>
 	</div>
