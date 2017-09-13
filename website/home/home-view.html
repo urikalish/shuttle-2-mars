@@ -1,23 +1,19 @@
 <article ng-controller="homeCtrl">
-	<div class="content-panel" style="width:520px; height: 150px;">
+	<div class="content-panel" style="width:660px; height: 120px;">
 		<div class="panel"></div>
 		<div class="content">
-			<div class="panel-title">News</div>
-			<div>
-				<div class="data-field">Next Launch</div>
-				<div class="data-value">{{model.nextLaunchDate.toUTCString()}}</div>
+			<div class="panel-title">Next Launch</div>
+			<div class="panel-line">
+				<div class="data-field">From / To</div>
+				<div class="data-value">Cape Canaveral, Florida / Station 001, Mars</div>
 			</div>
-			<div>
-				<div class="data-field">From</div>
-				<div class="data-value">Cape Canaveral, Florida</div>
+			<div class="panel-line">
+				<div class="data-field">Time</div>
+				<div class="data-value">{{model.launch.date.toUTCString()}}</div>
 			</div>
-			<div>
-				<div class="data-field">To</div>
-				<div class="data-value">Station 001, Mars</div>
-			</div>
-			<div>
+			<div class="panel-line">
 				<div class="data-field">Countdown</div>
-				<div class="data-value">T-{{model.timeToNextLaunch}}</div>
+				<div class="data-value">T-{{model.timeToLaunch}}</div>
 			</div>
 		</div>
 	</div>

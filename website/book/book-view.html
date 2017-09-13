@@ -1,5 +1,5 @@
 <article ng-controller="bookCtrl">
-	<div ng-show="model.selectedLaunch" class="book-launch-details-panel content-panel" style="margin-top: 20px; width:520px; height: 150px;">
+	<div ng-show="model.selectedLaunch" class="book-launch-details-panel content-panel" style="margin-top: 20px; width:660px; height: 145px;">
 		<div class="panel"></div>
 		<div class="content">
 			<div class="panel-title">Launch Details</div>
@@ -8,16 +8,16 @@
 				<select ng-model="model.selectedLaunch"
 						ng-options="launch as launch.name for launch in model.launches"
 						ng-change="launchChanged(model.selectedLaunch)"
-						class="data-value" style="width: 290px;" >
+						class="data-value" style="width: 430px;" >
 				</select>
 			</div>
 			<div class="panel-line">
-				<div class="data-field">From</div>
-				<div class="data-value">{{model.selectedLaunch.from}}</div>
+				<div class="data-field">From / To</div>
+				<div class="data-value">{{model.selectedLaunch.from}} / {{model.selectedLaunch.to}}</div>
 			</div>
 			<div class="panel-line">
-				<div class="data-field">To</div>
-				<div class="data-value">{{model.selectedLaunch.to}}</div>
+				<div class="data-field">Time</div>
+				<div class="data-value">{{model.selectedLaunch.date.toUTCString()}}</div>
 			</div>
 			<div class="panel-line">
 				<div class="data-field">Countdown</div>
@@ -25,7 +25,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="book-actions-panel content-panel" style="width:520px; height: 85px;">
+	<div class="book-actions-panel content-panel" style="width:660px; height: 85px;">
 		<div class="panel"></div>
 		<div class="content">
 			<div class="panel-title">Actions</div>
