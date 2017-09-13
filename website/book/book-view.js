@@ -22,8 +22,23 @@ angular.module('mainApp').controller('bookCtrl', function bookCtrl($scope, $inte
 			{name: 'MAR 2030', date: new Date(Date.UTC(2030,2,16,13,32,0,0)), from: 'Cape Canaveral, Florida', to: 'Station 001, Mars'}
 		],
 		selectedLaunch: null,
-		timeToLaunch: 0
+		timeToLaunch: 0,
+		canReset: false
 	};
+
+	function reset() {
+		$scope.model.selectedLaunch = $scope.model.launches[0];
+		$scope.launchChanged();
+		disableReset();
+	}
+
+	function enableReset() {
+		$scope.model.canReset = true;
+	}
+
+	function disableReset() {
+		$scope.model.canReset = false;
+	}
 
 	function updateTimeToLaunch() {
 		$scope.model.timeToLaunch = (($scope.model.selectedLaunch.date.getTime() - (new Date()).getTime()) / 1000).toFixed(0);
@@ -31,15 +46,17 @@ angular.module('mainApp').controller('bookCtrl', function bookCtrl($scope, $inte
 
 	$scope.launchChanged = function launchChanged() {
 		updateTimeToLaunch();
+		enableReset();
+	};
+
+	$scope.onResetClicked = function onResetClicked() {
+		reset();
 	};
 
 	$interval(function() {
-		if ($scope.model.selectedLaunch) {
-			updateTimeToLaunch();
-		}
+		updateTimeToLaunch();
 	}, 1000);
 
-	$scope.model.selectedLaunch = $scope.model.launches[0];
-	$scope.launchChanged();
+	reset();
 
 });

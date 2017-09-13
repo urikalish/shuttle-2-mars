@@ -70,18 +70,8 @@ button {
 	color: #f96;
 }
 
-button:hover,
-button:focus,
-button:active {
-	border: 1px solid #fff;
-	background-color: #000;
-	color: #fff;
-}
-
 button.disabled {
-	border: 1px solid #666;
-	background-color: #333;
-	color: #666;
+	opacity: 0;
 	cursor: default;
 	pointer-events: none;
 }

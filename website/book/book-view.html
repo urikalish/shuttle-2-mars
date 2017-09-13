@@ -30,7 +30,7 @@
 		<div class="content">
 			<div class="panel-title">Actions</div>
 			<div class="panel-line text-align--right">
-				<button>Reset</button>
+				<button ng-class="{'disabled': !model.canReset}" ng-click="onResetClicked()">Reset</button>
 				<button>Book</button>
 			</div>
 		</div>
