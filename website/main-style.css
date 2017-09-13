@@ -34,6 +34,10 @@ input {
 	height: 25px;
 }
 
+input[readonly] {
+	background-color: #ccc;
+}
+
 select {
 	font-family: "Orbitron", arial, sans-serif;
 	outline: none;
