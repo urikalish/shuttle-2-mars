@@ -31,36 +31,12 @@
 			<div class="panel-title">Reservation Details</div>
 			<div class="panel-line">
 				<div class="data-field">Humans / Cats</div>
-				<select ng-model="model.numberOfHumans"
-						ng-change="numberOfHumansChanged()"
-						class="data-value" style="width: 80px;">
-					<option value="0">0</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option>
-					<option value="9">9</option>
-					<option value="10">10</option>
-				</select>
-				<select ng-model="model.numberOfCats"
-						ng-change="numberOfCatsChanged()"
-						class="data-value" style="width: 80px;">
-					<option value="0">0</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option>
-					<option value="9">9</option>
-					<option value="10">10</option>
-				</select>
+				<input ng-value="model.numberOfHumans" readonly="readonly" style="width: 45px;"/>
+				<div ng-click="increaseNumberOfHumans()" class="spinner up" style="top: -8px;"></div>
+				<div ng-click="decreaseNumberOfHumans()" class="spinner down" style="margin-left: -24px; top: 18px;"></div>
+				<input ng-value="model.numberOfCats" readonly="readonly" style="margin-left: 20px; width: 45px;"/>
+				<div ng-click="increaseNumberOfCats()" class="spinner up" style="top: -8px;"></div>
+				<div ng-click="decreaseNumberOfCats()" class="spinner down" style="margin-left: -24px; top: 18px;"></div>
 			</div>
 		</div>
 	</div>
@@ -70,7 +46,7 @@
 			<div class="panel-title">Actions</div>
 			<div class="panel-line text-align--right">
 				<button ng-class="{'disabled': !model.canReset}" ng-click="onResetClicked()">Reset</button>
-				<button>Book</button>
+				<button ng-class="{'disabled': !model.canBook}">Book</button>
 			</div>
 		</div>
 	</div>

@@ -23,17 +23,19 @@ angular.module('mainApp').controller('bookCtrl', function bookCtrl($scope, $inte
 		],
 		selectedLaunch: null,
 		timeToLaunch: 0,
-		numberOfHumans: '1',
-		numberOfCats: '0',
-		canReset: false
+		numberOfHumans: 1,
+		numberOfCats: 0,
+		canReset: false,
+		canBook: true
 	};
 
 	function reset() {
 		$scope.model.selectedLaunch = $scope.model.launches[0];
 		$scope.launchChanged();
-		$scope.model.numberOfHumans = '1';
-		$scope.model.numberOfCats = '0';
+		$scope.model.numberOfHumans = 1;
+		$scope.model.numberOfCats = 0;
 		disableReset();
+		enableBook();
 	}
 
 	function enableReset() {
@@ -42,6 +44,14 @@ angular.module('mainApp').controller('bookCtrl', function bookCtrl($scope, $inte
 
 	function disableReset() {
 		$scope.model.canReset = false;
+	}
+
+	function enableBook() {
+		$scope.model.canBook = true;
+	}
+
+	function disableBook() {
+		$scope.model.canBook = false;
 	}
 
 	function updateTimeToLaunch() {
@@ -53,8 +63,34 @@ angular.module('mainApp').controller('bookCtrl', function bookCtrl($scope, $inte
 		enableReset();
 	};
 
-	$scope.numberOfHumansChanged = function numberOfHumansChanged() {
+	$scope.increaseNumberOfHumans = function increaseNumberOfHumans() {
+		$scope.model.numberOfHumans++;
 		enableReset();
+	};
+
+	$scope.decreaseNumberOfHumans = function decreaseNumberOfHumans() {
+		if ($scope.model.numberOfHumans > 0) {
+			$scope.model.numberOfHumans--;
+			enableReset();
+		}
+		if ($scope.model.numberOfHumans === 0 && $scope.model.numberOfCats === 0) {
+			disableBook();
+		}
+	};
+
+	$scope.increaseNumberOfCats = function increaseNumberOfCats() {
+		$scope.model.numberOfCats++;
+		enableReset();
+	};
+
+	$scope.decreaseNumberOfCats = function decreaseNumberOfCats() {
+		if ($scope.model.numberOfCats > 0) {
+			$scope.model.numberOfCats--;
+			enableReset();
+		}
+		if ($scope.model.numberOfHumans === 0 && $scope.model.numberOfCats === 0) {
+			disableBook();
+		}
 	};
 
 	$scope.numberOfCatsChanged = function numberOfCatsChanged() {
