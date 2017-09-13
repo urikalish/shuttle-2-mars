@@ -372,33 +372,45 @@ select.data-value {
 }
 
 .spinner {
+	cursor: pointer;
+}
+
+.spinner.disabled {
+	cursor: default;
+	pointer-events: none;
+}
+
+.arrow {
 	display: inline-block;
 	position: relative;
 	cursor: pointer;
 	border: 10px solid transparent;
 }
 
-.spinner.up {
+.arrow.up {
 	border-bottom: 10px solid #fff;
 	top: -5px;
 }
 
-.spinner.down {
+.arrow.up.disabled {
+	border-bottom: 10px solid #ccc;
+}
+
+.arrow.down {
 	border-top: 10px solid #fff;
 	top: 5px;
 }
 
-.spinner.left {
+.arrow.down.disabled {
+	border-top: 10px solid #ccc;
+}
+
+.arrow.left {
 	border-right: 10px solid #fff;
 	left: -5px;
 }
 
-.spinner.right {
+.arrow.right {
 	border-left: 10px solid #fff;
 	left: 5px;
-}
-
-.spinner.disabled {
-	cursor: default;
-	pointer-events: none;
 }

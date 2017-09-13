@@ -30,10 +30,10 @@
                 <div class="data-value user-select--none">
                     <input ng-value="model.numberOfHumans" readonly="readonly" style="width: 45px;"/>
                     <div ng-click="increaseNumberOfHumans()" class="spinner arrow up" style="top: -8px;"></div>
-                    <div ng-click="decreaseNumberOfHumans()" class="spinner arrow down" style="margin-left: -24px; top: 18px;"></div>
+                    <div ng-click="decreaseNumberOfHumans()" class="spinner arrow down" ng-class="{'disabled': model.numberOfHumans <= 0}" style="margin-left: -24px; top: 18px;"></div>
                     <input ng-value="model.numberOfCats" readonly="readonly" style="margin-left: 20px; width: 45px;"/>
                     <div ng-click="increaseNumberOfCats()" class="spinner arrow up" style="top: -8px;"></div>
-                    <div ng-click="decreaseNumberOfCats()" class="spinner arrow down" style="margin-left: -24px; top: 18px;"></div>
+                    <div ng-click="decreaseNumberOfCats()" class="spinner arrow down" ng-class="{'disabled': model.numberOfCats <= 0}" style="margin-left: -24px; top: 18px;"></div>
                 </div>
             </div>
         </div>
