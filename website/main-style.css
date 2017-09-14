@@ -38,6 +38,10 @@ input[readonly] {
 	background-color: #ccc;
 }
 
+input[readonly].alert {
+	background-color: #faa;
+}
+
 select {
 	font-family: "Orbitron", arial, sans-serif;
 	outline: none;
@@ -229,11 +233,12 @@ article {
 }
 
 .main__header__nav li > a {
+	transition: all 1s cubic-bezier(0.250, 0.100, 0.250, 1.000);
 	padding: 7px 15px;
-	color: #a55;
+	color: #fff;
+	opacity: 0.5;
 	font-size: 18px;
 	text-transform: uppercase;
-	transition: all 1s cubic-bezier(0.250, 0.100, 0.250, 1.000);
 }
 
 .main__header__nav li {
@@ -244,7 +249,7 @@ article {
 }
 
 .main__header__nav li.active a {
-	color: #fff;	
+	opacity: 1;
 }
 
 .main__header__nav__marker-track {

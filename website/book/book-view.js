@@ -74,7 +74,7 @@ angular.module('mainApp').controller('bookCtrl', function bookCtrl($scope, $inte
 			$scope.model.numberOfHumans--;
 			enableReset();
 		}
-		if ($scope.model.numberOfHumans === 0 && $scope.model.numberOfCats === 0) {
+		if ($scope.model.numberOfHumans === 0) {
 			disableBook();
 		}
 	};
@@ -89,9 +89,6 @@ angular.module('mainApp').controller('bookCtrl', function bookCtrl($scope, $inte
 		if ($scope.model.numberOfCats > 0) {
 			$scope.model.numberOfCats--;
 			enableReset();
-		}
-		if ($scope.model.numberOfHumans === 0 && $scope.model.numberOfCats === 0) {
-			disableBook();
 		}
 	};
 
